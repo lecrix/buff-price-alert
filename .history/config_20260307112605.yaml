@@ -19,67 +19,43 @@ schedule:
 # ------ 请求设置 ------
 # 每个饰品查询之间的间隔秒数
 # 例：5 个饰品，间隔 30 秒 → 每个饰品约 2.5 分钟查一次
-request_interval: 7
+request_interval: 30
 
 # ------ 价格判断 ------
 # 最低价低于第二低价此百分比时触发通知
-price_threshold_percent: 2
+price_threshold_percent: 23
 
 # 同一饰品的通知冷却时间（分钟），避免重复推送
-notify_cooldown_minutes: 15
+notify_cooldown_minutes: 30
 
 # ------ 监控饰品列表 ------
 # goods_id：在 buff 饰品页面 URL 中找到，如 https://buff.163.com/goods/34474
 # min_paintwear / max_paintwear：磨损值区间
 items:
 # AWP | 克拉考 (久经沙场 0.15-0.18)
-  - name: "AWP | 克拉考 (久经沙场 0.15-0.18)"
+  - name: "AWP | 克拉考 (久经沙场)"
     goods_id: 968298
     min_paintwear: 0.15
     max_paintwear: 0.18
 
 # AWP | 克拉考 (久经沙场 0.18-0.21)
-  - name: "AWP | 克拉考 (久经沙场 0.18-0.21)"
+  - name: "AWP | 克拉考 (久经沙场)"
     goods_id: 968298
     min_paintwear: 0.18
     max_paintwear: 0.21
 
 # AWP | 克拉考 (久经沙场 0.21-0.24)
-  - name: "AWP | 克拉考 (久经沙场 0.21-0.24)"
+  - name: "AWP | 克拉考 (久经沙场)"
     goods_id: 968298
     min_paintwear: 0.21
     max_paintwear: 0.24
 
 # AWP | 克拉考 (久经沙场 0.24-0.27)
-  - name: "AWP | 克拉考 (久经沙场 0.24-0.27)"
+  - name: "AWP | 克拉考 (久经沙场)"
     goods_id: 968298
     min_paintwear: 0.24
     max_paintwear: 0.27
 
-
-# USP消音版 | 破颚者 (久经沙场 0.15-0.18)
-  - name: "USP消音版 | 破颚者 (久经沙场 0.15-0.18)"
-    goods_id: 956527
-    min_paintwear: 0.15
-    max_paintwear: 0.18
-
-# USP消音版 | 破颚者 (久经沙场 0.18-0.21)
-  - name: "USP消音版 | 破颚者 (久经沙场 0.18-0.21)"
-    goods_id: 956527
-    min_paintwear: 0.18
-    max_paintwear: 0.21
-
-# USP消音版 | 破颚者 (久经沙场 0.21-0.24)
-  - name: "USP消音版 | 破颚者 (久经沙场 0.21-0.24)"
-    goods_id: 956527
-    min_paintwear: 0.21
-    max_paintwear: 0.24
-
-# USP消音版 | 破颚者 (久经沙场 0.24-0.27)
-  - name: "USP消音版 | 破颚者 (久经沙场 0.24-0.27)"
-    goods_id: 956527
-    min_paintwear: 0.24
-    max_paintwear: 0.27
 
 # 添加更多饰品，格式同上：
 #  - name: "饰品名称"

@@ -26,7 +26,7 @@ request_interval: 7
 price_threshold_percent: 2
 
 # 同一饰品的通知冷却时间（分钟），避免重复推送
-notify_cooldown_minutes: 15
+notify_cooldown_minutes: 30
 
 # ------ 监控饰品列表 ------
 # goods_id：在 buff 饰品页面 URL 中找到，如 https://buff.163.com/goods/34474
