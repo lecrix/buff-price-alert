@@ -5,6 +5,7 @@ main.py — Buff 饰品价格监控 主入口
 """
 
 import logging
+import random
 import sys
 import time
 from datetime import datetime
@@ -208,15 +209,17 @@ def main():
 
                 process_item(item, config)
 
-                # 如果不是最后一个饰品，等待间隔
+                # 如果不是最后一个饰品，等待间隔（加随机抖动）
                 if i < len(items) - 1:
-                    logger.info("⏳ 等待 %d 秒后查询下一款...", interval)
-                    time.sleep(interval)
+                    jitter = interval * random.uniform(0.7, 1.3)
+                    logger.info("⏳ 等待 %.1f 秒后查询下一款...", jitter)
+                    time.sleep(jitter)
 
-            # 一轮结束后，等待间隔再开始下一轮
-            logger.info("✅ 第 %d 轮查询完成，等待 %d 秒后开始下一轮...",
-                        round_count, interval)
-            time.sleep(interval)
+            # 一轮结束后，等待间隔再开始下一轮（加随机抖动）
+            jitter = interval * random.uniform(0.7, 1.3)
+            logger.info("✅ 第 %d 轮查询完成，等待 %.1f 秒后开始下一轮...",
+                        round_count, jitter)
+            time.sleep(jitter)
 
         except KeyboardInterrupt:
             logger.info("\n\n⛔ 用户中断，程序退出。")
